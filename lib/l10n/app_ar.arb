@@ -1,0 +1,22 @@
+{
+  "@@locale": "ar",
+  "appTitle": "روم جينيس",
+  "continueText": "متابعة",
+  "skip": "تخطي",
+  "next": "التالي",
+  "getStarted": "ابدأ الآن",
+  "language": "اللغة",
+  "english": "الإنجليزية",
+  "arabic": "العربية",
+  "settings": "الإعدادات",
+  "home": "الرئيسية",
+  "createNewDesign": "إنشاء تصميم جديد",
+  "splashTitle": "روم جينيس",
+  "splashSubtitle": "إعادة تصميم الغرف بالذكاء الاصطناعي في خطوات بسيطة.",
+  "onboardingTitle1": "أعد تصميم غرفتك بالذكاء الاصطناعي",
+  "onboardingSubtitle1": "ارفع صورة الغرفة واحصل على أفكار تصميم جديدة.",
+  "onboardingTitle2": "اختر الستايل المناسب لذوقك",
+  "onboardingSubtitle2": "حدد نوع الغرفة والستايل والمود قبل إنشاء النتيجة.",
+  "onboardingTitle3": "احفظ المشاريع وقارن النتائج",
+  "onboardingSubtitle3": "احتفظ بنسخ التصميم وارجع لها في أي وقت."
+}

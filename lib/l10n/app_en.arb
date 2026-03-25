@@ -1,0 +1,22 @@
+{
+  "@@locale": "en",
+  "appTitle": "RoomGenius",
+  "continueText": "Continue",
+  "skip": "Skip",
+  "next": "Next",
+  "getStarted": "Get Started",
+  "language": "Language",
+  "english": "English",
+  "arabic": "Arabic",
+  "settings": "Settings",
+  "home": "Home",
+  "createNewDesign": "Create New Design",
+  "splashTitle": "RoomGenius",
+  "splashSubtitle": "AI-powered room redesign in a few taps.",
+  "onboardingTitle1": "Redesign your room with AI",
+  "onboardingSubtitle1": "Upload your room photo and generate fresh interior concepts.",
+  "onboardingTitle2": "Explore styles that fit your taste",
+  "onboardingSubtitle2": "Choose mood, style, and room type before generating results.",
+  "onboardingTitle3": "Save projects and compare results",
+  "onboardingSubtitle3": "Keep design versions organized and revisit them anytime."
+}
