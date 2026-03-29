@@ -18,5 +18,15 @@
   "onboardingTitle2": "Explore styles that fit your taste",
   "onboardingSubtitle2": "Choose mood, style, and room type before generating results.",
   "onboardingTitle3": "Save projects and compare results",
-  "onboardingSubtitle3": "Keep design versions organized and revisit them anytime."
+  "onboardingSubtitle3": "Keep design versions organized and revisit them anytime.",
+  "poweredByAi": "POWERED BY AI",
+  "visualizeYourSpace": "Visualize Your Space",
+  "visualizeYourSpaceSubtitle": "Transform your room in seconds. Take a photo and let our AI suggest stunning interior designs tailored to your style.",
+  "styleInSeconds": "Style in Seconds",
+  "styleInSecondsSubtitle": "Pick a vibe you love. Our AI will transform your room into any of these signature styles instantly.",
+  "shopTheLook": "Shop the Look",
+  "shopTheLookSubtitle": "Our AI identifies furniture and decor in any photo so you can buy exactly what you see.",
+  "minimalist": "Minimalist",
+  "minimalistSubtitle": "Clean & Simple",
+  "getStartedNow": "Get Started"
 }

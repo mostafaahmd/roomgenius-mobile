@@ -64,4 +64,34 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingSubtitle3 => 'Keep design versions organized and revisit them anytime.';
+
+  @override
+  String get poweredByAi => 'POWERED BY AI';
+
+  @override
+  String get visualizeYourSpace => 'Visualize Your Space';
+
+  @override
+  String get visualizeYourSpaceSubtitle => 'Transform your room in seconds. Take a photo and let our AI suggest stunning interior designs tailored to your style.';
+
+  @override
+  String get styleInSeconds => 'Style in Seconds';
+
+  @override
+  String get styleInSecondsSubtitle => 'Pick a vibe you love. Our AI will transform your room into any of these signature styles instantly.';
+
+  @override
+  String get shopTheLook => 'Shop the Look';
+
+  @override
+  String get shopTheLookSubtitle => 'Our AI identifies furniture and decor in any photo so you can buy exactly what you see.';
+
+  @override
+  String get minimalist => 'Minimalist';
+
+  @override
+  String get minimalistSubtitle => 'Clean & Simple';
+
+  @override
+  String get getStartedNow => 'Get Started';
 }

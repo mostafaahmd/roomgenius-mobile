@@ -1,6 +1,9 @@
 class AppImages {
   static const roundedLogo = 'https://i.imgur.com/9EsY2t6.png';
 
+  /* <---- SPLASH SCREEN -----> */
+  static const String splashLogo = 'assets/images/splash_logo.png';
+
   /* <---- Homepage banner -----> */
   static const homePageBanner = 'https://i.imgur.com/8hBIsS5.png';
 
@@ -17,9 +20,9 @@ class AppImages {
   static const delete_warrning = 'assets/images/delete_warrning.png';
   static const order_placed = 'assets/images/order_placed.png';
 
-  static const onboarding1 = 'assets/images/intro/1.png';
-  static const onboarding2 = 'assets/images/intro/2.png';
-  static const onboarding3 = 'assets/images/intro/3.png';
+  static const onboardingRoom = 'assets/images/onboarding_room.png';
+  static const onboardingStyle = 'assets/images/onboarding_style.png';
+  static const onboardingShopLook = 'assets/images/onboarding_shop_look.png';
 
   /* <---- Other Illustrations -----> */
   static const numberVerfication = 'https://i.imgur.com/tCCmY3I.png';

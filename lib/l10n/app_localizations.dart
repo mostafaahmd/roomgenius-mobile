@@ -208,6 +208,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Keep design versions organized and revisit them anytime.'**
   String get onboardingSubtitle3;
+
+  /// No description provided for @poweredByAi.
+  ///
+  /// In en, this message translates to:
+  /// **'POWERED BY AI'**
+  String get poweredByAi;
+
+  /// No description provided for @visualizeYourSpace.
+  ///
+  /// In en, this message translates to:
+  /// **'Visualize Your Space'**
+  String get visualizeYourSpace;
+
+  /// No description provided for @visualizeYourSpaceSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Transform your room in seconds. Take a photo and let our AI suggest stunning interior designs tailored to your style.'**
+  String get visualizeYourSpaceSubtitle;
+
+  /// No description provided for @styleInSeconds.
+  ///
+  /// In en, this message translates to:
+  /// **'Style in Seconds'**
+  String get styleInSeconds;
+
+  /// No description provided for @styleInSecondsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a vibe you love. Our AI will transform your room into any of these signature styles instantly.'**
+  String get styleInSecondsSubtitle;
+
+  /// No description provided for @shopTheLook.
+  ///
+  /// In en, this message translates to:
+  /// **'Shop the Look'**
+  String get shopTheLook;
+
+  /// No description provided for @shopTheLookSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Our AI identifies furniture and decor in any photo so you can buy exactly what you see.'**
+  String get shopTheLookSubtitle;
+
+  /// No description provided for @minimalist.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimalist'**
+  String get minimalist;
+
+  /// No description provided for @minimalistSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Clean & Simple'**
+  String get minimalistSubtitle;
+
+  /// No description provided for @getStartedNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Started'**
+  String get getStartedNow;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

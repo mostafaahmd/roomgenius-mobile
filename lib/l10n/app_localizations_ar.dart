@@ -64,4 +64,34 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get onboardingSubtitle3 => 'احتفظ بنسخ التصميم وارجع لها في أي وقت.';
+
+  @override
+  String get poweredByAi => 'مدعوم بالذكاء الاصطناعي';
+
+  @override
+  String get visualizeYourSpace => 'تخيّل مساحتك';
+
+  @override
+  String get visualizeYourSpaceSubtitle => 'حوّل غرفتك في ثوانٍ. التقط صورة ودع الذكاء الاصطناعي يقترح تصاميم داخلية مناسبة لذوقك.';
+
+  @override
+  String get styleInSeconds => 'الستايل في ثوانٍ';
+
+  @override
+  String get styleInSecondsSubtitle => 'اختر الأجواء التي تحبها، وسيحوّل الذكاء الاصطناعي غرفتك إلى واحد من هذه الأساليب فورًا.';
+
+  @override
+  String get shopTheLook => 'تسوّق الإطلالة';
+
+  @override
+  String get shopTheLookSubtitle => 'يتعرف الذكاء الاصطناعي على الأثاث والديكور في أي صورة لتشتري ما تراه بالضبط.';
+
+  @override
+  String get minimalist => 'مينيمال';
+
+  @override
+  String get minimalistSubtitle => 'نظيف وبسيط';
+
+  @override
+  String get getStartedNow => 'ابدأ الآن';
 }

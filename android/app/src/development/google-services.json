@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "487409198060",
+    "project_id": "room-genius",
+    "storage_bucket": "room-genius.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487409198060:android:4835fc64e240fa8f6416c9",
+        "android_client_info": {
+          "package_name": "com.roomgenius.mobile.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh04kfjqo1WBMBjJdva1Sr_6yuoMX0mp0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
