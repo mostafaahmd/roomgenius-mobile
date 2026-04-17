@@ -56,7 +56,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
       child: DropdownButtonFormField<String>(
         value: selectedValue,
         style: AppTextStyles.mediumText(context).copyWith(
-          color: AppColors.blackColor,
+          color: AppColors.black,
           fontSize: 14.sp,
         ),
         items: widget.items
@@ -65,7 +65,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
                   child: Text(
                     item,
                     style: AppTextStyles.mediumText(context).copyWith(
-                      color: AppColors.blackColor,
+                      color: AppColors.black,
                       fontSize: 14.sp,
                     ),
                   ),
@@ -81,7 +81,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
         },
         decoration: InputDecoration(
           filled: true,
-          fillColor: AppColors.whiteColor,
+          fillColor: AppColors.white,
           isDense: true,
           contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
           border: OutlineInputBorder(

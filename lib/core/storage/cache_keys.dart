@@ -7,4 +7,5 @@ class CacheKeys {
   static const String themeBlack = 'use_black_theme';
   static const String appLocale = 'app_locale';
   static const String onboardingSeen = 'onboarding_seen';
+  static const String isDarkMode = 'is_dark_mode';
 }

@@ -12,12 +12,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appTitle => 'RoomGenius';
 
   @override
-  String get continueText => 'Continue';
-
-  @override
-  String get skip => 'Skip';
-
-  @override
   String get next => 'Next';
 
   @override
@@ -66,9 +60,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboardingSubtitle3 => 'Keep design versions organized and revisit them anytime.';
 
   @override
-  String get poweredByAi => 'POWERED BY AI';
-
-  @override
   String get visualizeYourSpace => 'Visualize Your Space';
 
   @override
@@ -94,4 +85,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get getStartedNow => 'Get Started';
+
+  @override
+  String get poweredByAi => 'POWERED BY AI';
+
+  @override
+  String get skip => 'Skip';
+
+  @override
+  String get continueText => 'Continue';
+
+  @override
+  String get back => 'Back';
+
+  @override
+  String get onboardingSaveFailed => 'Something went wrong. Please try again.';
 }

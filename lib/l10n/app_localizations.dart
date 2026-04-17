@@ -101,18 +101,6 @@ abstract class AppLocalizations {
   /// **'RoomGenius'**
   String get appTitle;
 
-  /// No description provided for @continueText.
-  ///
-  /// In en, this message translates to:
-  /// **'Continue'**
-  String get continueText;
-
-  /// No description provided for @skip.
-  ///
-  /// In en, this message translates to:
-  /// **'Skip'**
-  String get skip;
-
   /// No description provided for @next.
   ///
   /// In en, this message translates to:
@@ -209,12 +197,6 @@ abstract class AppLocalizations {
   /// **'Keep design versions organized and revisit them anytime.'**
   String get onboardingSubtitle3;
 
-  /// No description provided for @poweredByAi.
-  ///
-  /// In en, this message translates to:
-  /// **'POWERED BY AI'**
-  String get poweredByAi;
-
   /// No description provided for @visualizeYourSpace.
   ///
   /// In en, this message translates to:
@@ -268,6 +250,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Get Started'**
   String get getStartedNow;
+
+  /// No description provided for @poweredByAi.
+  ///
+  /// In en, this message translates to:
+  /// **'POWERED BY AI'**
+  String get poweredByAi;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @continueText.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueText;
+
+  /// No description provided for @back.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get back;
+
+  /// No description provided for @onboardingSaveFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong. Please try again.'**
+  String get onboardingSaveFailed;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

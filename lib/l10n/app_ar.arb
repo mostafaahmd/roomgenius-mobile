@@ -28,5 +28,6 @@
   "shopTheLookSubtitle": "يتعرف الذكاء الاصطناعي على الأثاث والديكور في أي صورة لتشتري ما تراه بالضبط.",
   "minimalist": "مينيمال",
   "minimalistSubtitle": "نظيف وبسيط",
-  "getStartedNow": "ابدأ الآن"
+  "back": "عودة",
+  "onboardingSaveFailed": "حدث خطأ ما. الرجاء المحاولة مرة أخرى."
 }

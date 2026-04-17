@@ -27,7 +27,7 @@ class AppSectionCard extends StatelessWidget {
       margin: margin ?? EdgeInsets.symmetric(horizontal: 20.w),
       padding: padding ?? EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: AppColors.whiteColor,
+        color: AppColors.white,
         borderRadius: BorderRadius.circular(16.r),
       ),
       child: Column(
@@ -98,9 +98,9 @@ class AppMenuTile extends StatelessWidget {
     final effectiveOnTap = isDisabled ? null : onTap;
 
     final titleColor = isDanger
-        ? AppColors.errorRedColor
+        ? AppColors.error
         : isDisabled
-            ? AppColors.greyColor.withOpacity(0.6)
+            ? AppColors.gray.withOpacity(0.6)
             : AppColors.textColor;
 
     return ListTile(
@@ -117,9 +117,9 @@ class AppMenuTile extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: AppColors.greyColor, width: 0.5),
+                  border: Border.all(color: AppColors.gray, width: 0.5),
                 ),
-                child: Icon(Icons.lock, size: 12, color: AppColors.greyColor),
+                child: Icon(Icons.lock, size: 12, color: AppColors.gray),
               ),
             ),
         ],
@@ -137,7 +137,7 @@ class AppMenuTile extends StatelessWidget {
               ? Icon(
                   Icons.arrow_forward_ios_rounded,
                   size: 16.sp,
-                  color: AppColors.greyColor.withOpacity(0.6),
+                  color: AppColors.gray.withOpacity(0.6),
                 )
               : null),
       onTap: effectiveOnTap,

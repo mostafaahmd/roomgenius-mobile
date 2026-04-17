@@ -1,8 +1,6 @@
 {
   "@@locale": "en",
   "appTitle": "RoomGenius",
-  "continueText": "Continue",
-  "skip": "Skip",
   "next": "Next",
   "getStarted": "Get Started",
   "language": "Language",
@@ -19,7 +17,6 @@
   "onboardingSubtitle2": "Choose mood, style, and room type before generating results.",
   "onboardingTitle3": "Save projects and compare results",
   "onboardingSubtitle3": "Keep design versions organized and revisit them anytime.",
-  "poweredByAi": "POWERED BY AI",
   "visualizeYourSpace": "Visualize Your Space",
   "visualizeYourSpaceSubtitle": "Transform your room in seconds. Take a photo and let our AI suggest stunning interior designs tailored to your style.",
   "styleInSeconds": "Style in Seconds",
@@ -28,5 +25,10 @@
   "shopTheLookSubtitle": "Our AI identifies furniture and decor in any photo so you can buy exactly what you see.",
   "minimalist": "Minimalist",
   "minimalistSubtitle": "Clean & Simple",
-  "getStartedNow": "Get Started"
+  "getStartedNow": "Get Started",
+  "poweredByAi": "POWERED BY AI",
+  "skip": "Skip",
+  "continueText": "Continue",
+  "back": "Back",
+  "onboardingSaveFailed": "Something went wrong. Please try again."
 }

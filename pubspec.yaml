@@ -102,6 +102,8 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/branding/
+    - assets/images/onboarding/
     - assets/icons/
 
   fonts:
@@ -115,22 +117,23 @@ flutter:
 flutter_icons:
   android: true
   ios: true
-  image_path: assets/images/launcher_icon.png
+  image_path: assets/images/branding/splash_logo1.png
   adaptive_icon_background: "#FFFFFF"
-  adaptive_icon_foreground: assets/images/launcher_icon.png
+  adaptive_icon_foreground: assets/images/branding/splash_logo1.png
 
 flutter_native_splash:
-  color: "#FFFFFF"
-  color_dark: "#FFFFFF"
-  image: "assets/images/primary_splash.png"
-  android_12:
-    image: "assets/images/primary_splash.png"
+  color: "#FFB78CFF"
+  color_dark: "#FFB78CFF"
+  image: assets/images/branding/splash_logo1.png
   android: true
   ios: true
   web: false
-  android_gravity: center
-  ios_content_mode: scaleAspectFill
   fullscreen: true
+
+  android_12:
+    color: "#FFB78CFF"
+    color_dark: "#FFB78CFF"
+    image: assets/images/branding/splash_logo1.png
 
 # ✅ Keep flutter_intl config
 #flutter_intl:

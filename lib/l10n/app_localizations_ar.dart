@@ -12,12 +12,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get appTitle => 'روم جينيس';
 
   @override
-  String get continueText => 'متابعة';
-
-  @override
-  String get skip => 'تخطي';
-
-  @override
   String get next => 'التالي';
 
   @override
@@ -66,9 +60,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get onboardingSubtitle3 => 'احتفظ بنسخ التصميم وارجع لها في أي وقت.';
 
   @override
-  String get poweredByAi => 'مدعوم بالذكاء الاصطناعي';
-
-  @override
   String get visualizeYourSpace => 'تخيّل مساحتك';
 
   @override
@@ -93,5 +84,20 @@ class AppLocalizationsAr extends AppLocalizations {
   String get minimalistSubtitle => 'نظيف وبسيط';
 
   @override
-  String get getStartedNow => 'ابدأ الآن';
+  String get getStartedNow => 'Get Started';
+
+  @override
+  String get poweredByAi => 'مدعوم بالذكاء الاصطناعي';
+
+  @override
+  String get skip => 'تخطي';
+
+  @override
+  String get continueText => 'متابعة';
+
+  @override
+  String get back => 'عودة';
+
+  @override
+  String get onboardingSaveFailed => 'حدث خطأ ما. الرجاء المحاولة مرة أخرى.';
 }

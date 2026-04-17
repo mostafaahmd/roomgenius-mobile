@@ -51,7 +51,7 @@ class AppTextFormField extends StatelessWidget {
         (prefixIconData != null
             ? Icon(
                 prefixIconData,
-                color: AppColors.iconBackground, // Gray color #6D6D6D
+                color: AppColors.gray, // Gray color #6D6D6D
                 size: 20.sp,
               )
             : null);
@@ -100,14 +100,14 @@ class AppTextFormField extends StatelessWidget {
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(39.r),
           borderSide: const BorderSide(
-            color: AppColors.dangerColor,
+            color: AppColors.error,
             width: 1.5,
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(39.r),
           borderSide: const BorderSide(
-            color: AppColors.dangerColor,
+            color: AppColors.error,
             width: 1.5,
           ),
         ),
