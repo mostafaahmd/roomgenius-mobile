@@ -13,6 +13,7 @@ import 'package:roomgenius_mobile/features/onboarding/presentation/cubit/onboard
 import 'package:roomgenius_mobile/features/onboarding/presentation/widgets/onboarding_bottom_card.dart';
 import 'package:roomgenius_mobile/features/onboarding/presentation/widgets/onboarding_room_preview.dart';
 import 'package:roomgenius_mobile/l10n/app_localizations.dart';
+import 'package:roomgenius_mobile/shared/constants/app_images.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -38,11 +39,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     if (_didPrecache) return;
     _didPrecache = true;
 
-    for (final imagePath in const [
-      'assets/images/onboarding/onboarding_1.png',
-      'assets/images/onboarding/onboarding_2.png',
-      'assets/images/onboarding/onboarding_3.png',
-    ]) {
+    for (final imagePath in AppImages.onboardingAssets) {
       precacheImage(AssetImage(imagePath), context);
     }
   }
@@ -154,6 +151,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           child: PageView.builder(
                             controller: _pageController,
                             itemCount: state.steps.length,
+                            physics: state.isSaving
+                                ? const NeverScrollableScrollPhysics()
+                                : const ClampingScrollPhysics(),
                             onPageChanged: cubit.updatePage,
                             itemBuilder: (context, index) {
                               return AnimatedSwitcher(

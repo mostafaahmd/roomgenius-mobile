@@ -1,4 +1,3 @@
-// this file defines the SplashScreen widget, which is the first screen shown when the app is launched. It displays a logo and a progress indicator while the app determines whether to navigate to the onboarding screen or the home screen based on the user's state (e.g., whether they are a new user or returning user). The screen uses animations for the logo and progress indicator, and listens to the SplashCubit to get the resolved route for navigation.
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,8 +7,8 @@ import 'package:roomgenius_mobile/app/routing/routes.dart';
 import 'package:roomgenius_mobile/features/splash/presentation/cubit/splash_cubit.dart';
 import 'package:roomgenius_mobile/features/splash/presentation/cubit/splash_state.dart';
 import 'package:roomgenius_mobile/l10n/app_localizations.dart';
+import 'package:roomgenius_mobile/shared/constants/app_images.dart';
 
-/// SplashScreen is the first screen shown when the app is launched, displaying a logo and progress indicator while determining navigation.
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -19,21 +18,16 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
-  /// _splashDuration defines how long the splash screen's progress animation should run before it can navigate to the next screen. This duration is set to 2400 milliseconds (2.4 seconds) to provide enough time for the app to determine the appropriate navigation route while keeping the user engaged with the splash screen's animations.
   static const Duration _splashDuration = Duration(milliseconds: 2400);
-  /// _progressController manages the animation for the progress indicator, which fills up over the duration of the splash screen. It is initialized with the _splashDuration and starts animating immediately when the splash screen is shown.
+  static const Duration _pulseDuration = Duration(milliseconds: 1000);
+
   late final AnimationController _progressController;
-  /// _progressAnimation is a linear animation that goes from 0 to 1, representing the progress of the splash screen. It is driven by the _progressController and is used to animate the width of the progress indicator on the splash screen.
   late final AnimationController _pulseController;
-  /// _pulseAnimation is an animation that creates a pulsing effect on the logo displayed in the splash screen. It oscillates between a scale of 1 and 1.08, giving the logo a subtle growing and shrinking effect to make the splash screen more visually engaging while the app is loading.
   late final Animation<double> _progressAnimation;
-  /// _pulseAnimation is an animation that creates a pulsing effect on the logo displayed in the splash screen. It oscillates between a scale of 1 and 1.08, giving the logo a subtle growing and shrinking effect to make the splash screen more visually engaging while the app is loading.
   late final Animation<double> _pulseAnimation;
-  /// _resolvedRoute holds the navigation route that the SplashCubit resolves to after determining whether the user should go to the onboarding screen or the home screen. This variable is initially null and is set when the SplashCubit emits a state with a non-null route. The splash screen listens for changes to this variable and attempts to navigate to the resolved route once the splash animation has finished.
+
   SplashRoute? _resolvedRoute;
-  /// _animationFinished is a boolean flag that indicates whether the splash screen's progress animation has completed. It is initially set to false and is set to true when the _progressController finishes its forward animation. This flag is used in conjunction with the _tryNavigate method to ensure that the app only attempts to navigate to the next screen after the splash animation has completed, providing a smooth transition for the user.
   bool _animationFinished = false;
-  /// _navigated is a boolean flag that prevents multiple navigation attempts from occurring. It is initially set to false and is set to true once the app successfully navigates to either the onboarding screen or the home screen. This flag is checked in the _tryNavigate method to ensure that navigation only happens once, even if the SplashCubit emits multiple states with resolved routes or if the splash animation finishes multiple times due to any unforeseen circumstances.
   bool _navigated = false;
 
   @override
@@ -47,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     _pulseController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1000),
+      duration: _pulseDuration,
     );
 
     _progressAnimation = Tween<double>(
@@ -129,30 +123,6 @@ class _SplashScreenState extends State<SplashScreen>
             child: SafeArea(
               child: Column(
                 children: [
-                  SizedBox(height: 18.h),
-                  Align(
-                    alignment: AlignmentDirectional.topEnd,
-                    child: Container(
-                      margin: EdgeInsetsDirectional.only(end: 16.w),
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 14.w,
-                        vertical: 7.h,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.18),
-                        borderRadius: BorderRadius.circular(18.r),
-                      ),
-                      child: Text(
-                        'VARIANT 1 OF 10',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                    ),
-                  ),
                   const Spacer(),
                   AnimatedBuilder(
                     animation: _pulseAnimation,
@@ -184,11 +154,10 @@ class _SplashScreenState extends State<SplashScreen>
                         child: Padding(
                           padding: EdgeInsets.all(2.w),
                           child: Image.asset(
-                            'assets/images/branding/splash_logo1.png',
+                            AppImages.splashLogo,
                             fit: BoxFit.contain,
                             filterQuality: FilterQuality.high,
-                            errorBuilder: (_, error, stackTrace) {
-                              debugPrint('Splash logo load failed: $error');
+                            errorBuilder: (_, __, ___) {
                               return Icon(
                                 Icons.auto_awesome,
                                 color: Colors.white,
