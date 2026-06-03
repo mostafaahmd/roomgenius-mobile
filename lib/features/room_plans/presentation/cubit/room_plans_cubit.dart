@@ -23,9 +23,8 @@ class RoomPlansCubit extends Cubit<RoomPlansState> {
       success: (plans) {
         emit(
           state.copyWith(
-            status: plans.isEmpty
-                ? RoomPlansStatus.empty
-                : RoomPlansStatus.loaded,
+            status:
+                plans.isEmpty ? RoomPlansStatus.empty : RoomPlansStatus.loaded,
             plans: plans,
             clearError: true,
           ),
@@ -184,9 +183,8 @@ class RoomPlansCubit extends Cubit<RoomPlansState> {
 
     return result.when(
       success: (_) {
-        final updatedPlans = state.plans
-            .where((plan) => plan.id != id)
-            .toList();
+        final updatedPlans =
+            state.plans.where((plan) => plan.id != id).toList();
 
         final isSelectedPlanDeleted = state.selectedPlan?.id == id;
 

@@ -39,7 +39,8 @@ class RoomPlansState extends Equatable {
     return RoomPlansState(
       status: status ?? this.status,
       plans: plans ?? this.plans,
-      selectedPlan: clearSelectedPlan ? null : (selectedPlan ?? this.selectedPlan),
+      selectedPlan:
+          clearSelectedPlan ? null : (selectedPlan ?? this.selectedPlan),
       isSaving: isSaving ?? this.isSaving,
       errorMessage: clearError ? null : (errorMessage ?? this.errorMessage),
     );

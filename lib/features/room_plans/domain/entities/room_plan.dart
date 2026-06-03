@@ -4,6 +4,35 @@ import 'furniture_status.dart';
 import 'room_type.dart';
 
 class RoomPlan {
+
+  factory RoomPlan.fromJson(Map<String, dynamic> json) {
+    final checklistJson = json['checklist'];
+
+    return RoomPlan(
+      id: json['id'] as String? ?? '',
+      name: json['name'] as String? ?? '',
+      type: RoomType.fromValue(json['type'] as String? ?? ''),
+      width: _toDouble(json['width']),
+      length: _toDouble(json['length']),
+      budget: _toDouble(json['budget']),
+      style: DesignStyle.fromValue(json['style'] as String? ?? ''),
+      colorPalette: _toStringList(json['colorPalette']),
+      notes: json['notes'] as String? ?? '',
+      checklist: checklistJson is List
+          ? checklistJson
+              .whereType<Map<String, dynamic>>()
+              .map(
+                (item) => FurnitureItem.fromJson(
+                  Map<String, dynamic>.from(item),
+                ),
+              )
+              .toList()
+          : const [],
+      createdAt: _toDateTime(json['createdAt']),
+      updatedAt: _toDateTime(json['updatedAt']),
+      isSynced: json['isSynced'] as bool? ?? false,
+    );
+  }
   const RoomPlan({
     required this.id,
     required this.name,
@@ -108,35 +137,6 @@ class RoomPlan {
       'updatedAt': updatedAt.toIso8601String(),
       'isSynced': isSynced,
     };
-  }
-
-  factory RoomPlan.fromJson(Map<String, dynamic> json) {
-    final checklistJson = json['checklist'];
-
-    return RoomPlan(
-      id: json['id'] as String? ?? '',
-      name: json['name'] as String? ?? '',
-      type: RoomType.fromValue(json['type'] as String? ?? ''),
-      width: _toDouble(json['width']),
-      length: _toDouble(json['length']),
-      budget: _toDouble(json['budget']),
-      style: DesignStyle.fromValue(json['style'] as String? ?? ''),
-      colorPalette: _toStringList(json['colorPalette']),
-      notes: json['notes'] as String? ?? '',
-      checklist: checklistJson is List
-          ? checklistJson
-              .whereType<Map<String, dynamic>>()
-              .map(
-                (item) => FurnitureItem.fromJson(
-                  Map<String, dynamic>.from(item),
-                ),
-              )
-              .toList()
-          : const [],
-      createdAt: _toDateTime(json['createdAt']),
-      updatedAt: _toDateTime(json['updatedAt']),
-      isSynced: json['isSynced'] as bool? ?? false,
-    );
   }
 }
 

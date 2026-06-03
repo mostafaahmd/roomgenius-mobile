@@ -1,4 +1,4 @@
-enum RoomType{
+enum RoomType {
   bedroom('bedroom', 'Bedroom'),
   livingRoom('living_room', 'Living Room'),
   office('office', 'Home Office'),
