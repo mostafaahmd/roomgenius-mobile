@@ -9,4 +9,5 @@ class CacheKeys {
   static const String onboardingSeen = 'onboarding_seen';
   static const String splashSeen = 'splash_seen';
   static const String isDarkMode = 'is_dark_mode';
+  static const String roomPlans = 'room_plans';
 }
