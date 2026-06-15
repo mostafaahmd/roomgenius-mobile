@@ -3,6 +3,10 @@ import 'package:roomgenius_mobile/app/localization/locale_cubit.dart';
 import 'package:roomgenius_mobile/app/theme/app_theme_cubit.dart';
 import 'package:roomgenius_mobile/core/storage/local_storage_service.dart';
 import 'package:roomgenius_mobile/core/storage/secure_storage_service.dart';
+import 'package:roomgenius_mobile/features/create_room/data/services/room_image_storage_service.dart';
+import 'package:roomgenius_mobile/features/create_room/presentation/cubit/create_room_cubit.dart';
+import 'package:roomgenius_mobile/features/design_studio/domain/services/interior_prompt_composer.dart';
+import 'package:roomgenius_mobile/features/design_studio/domain/services/prompt_composer.dart';
 import 'package:roomgenius_mobile/features/room_plans/data/datasources/room_plans_local_data_source.dart';
 import 'package:roomgenius_mobile/features/room_plans/data/repositories/room_plans_repository_impl.dart';
 import 'package:roomgenius_mobile/features/room_plans/domain/repositories/room_plans_repository.dart';
@@ -47,6 +51,18 @@ Future<void> setupServiceLocator() async {
     ..registerFactory<RoomPlansCubit>(
       () => RoomPlansCubit(
         getIt<RoomPlansRepository>(),
+      ),
+    )
+    ..registerLazySingleton<RoomImageStorageService>(
+      () => const RoomImageStorageService(),
+    )
+    ..registerLazySingleton<PromptComposer>(
+      () => const InteriorPromptComposer(),
+    )
+    ..registerFactory<CreateRoomCubit>(
+      () => CreateRoomCubit(
+        imageStorageService: getIt<RoomImageStorageService>(),
+        promptComposer: getIt<PromptComposer>(),
       ),
     );
 }

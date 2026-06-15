@@ -4,9 +4,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:roomgenius_mobile/app/di/service_locator.dart';
 import 'package:roomgenius_mobile/app/routing/routes.dart';
+import 'package:roomgenius_mobile/features/create_room/presentation/cubit/create_room_cubit.dart';
+import 'package:roomgenius_mobile/features/create_room/presentation/pages/create_room_flow_screen.dart';
+import 'package:roomgenius_mobile/features/create_room/presentation/pages/upload_room_photo_screen.dart';
 import 'package:roomgenius_mobile/features/onboarding/presentation/pages/onboarding_screen.dart';
 import 'package:roomgenius_mobile/features/room_plans/presentation/cubit/room_plans_cubit.dart';
-import 'package:roomgenius_mobile/features/room_plans/presentation/pages/create_room_plan_screen.dart';
 import 'package:roomgenius_mobile/features/room_plans/presentation/pages/room_plan_details_screen.dart';
 import 'package:roomgenius_mobile/features/room_plans/presentation/pages/rooms_screen.dart';
 import 'package:roomgenius_mobile/features/splash/presentation/pages/splash_screen.dart';
@@ -37,6 +39,7 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: RoutePaths.rooms,
+      name: RouteNames.rooms,
       builder: (context, state) {
         return BlocProvider(
           create: (_) => getIt<RoomPlansCubit>()..loadRoomPlans(),
@@ -46,15 +49,17 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: RoutePaths.createRoom,
+      name: RouteNames.createRoom,
       builder: (context, state) {
         return BlocProvider(
-          create: (_) => getIt<RoomPlansCubit>()..loadRoomPlans(),
-          child: const CreateRoomPlanScreen(),
+          create: (_) => getIt<CreateRoomCubit>(),
+          child: const CreateRoomFlowScreen(),
         );
       },
     ),
     GoRoute(
       path: RoutePaths.roomDetails,
+      name: RouteNames.roomDetails,
       builder: (context, state) {
         final planId = state.pathParameters['id'];
 
@@ -69,6 +74,16 @@ final GoRouter appRouter = GoRouter(
         return BlocProvider(
           create: (_) => getIt<RoomPlansCubit>()..loadRoomPlanById(planId),
           child: RoomPlanDetailsScreen(planId: planId),
+        );
+      },
+    ),
+    GoRoute(
+      path: RoutePaths.createRoomPhoto,
+      name: RouteNames.createRoomPhoto,
+      builder: (context, state) {
+        return BlocProvider(
+          create: (_) => getIt<CreateRoomCubit>(),
+          child: const UploadRoomPhotoScreen(),
         );
       },
     ),
