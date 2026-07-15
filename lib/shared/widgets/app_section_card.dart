@@ -62,9 +62,9 @@ class AppMenuTile extends StatelessWidget {
   const AppMenuTile({
     super.key,
     required this.title,
-    this.iconPath, 
-    this.icon, 
-    this.leading, 
+    this.iconPath,
+    this.icon,
+    this.leading,
     this.onTap,
     this.showArrow = true,
     this.showLock = false,

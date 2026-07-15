@@ -15,11 +15,15 @@ class AppDefaults {
   static const double paddingXXLarge = 40.0;
 
   // Common EdgeInsets (responsive with ScreenUtil)
-  static EdgeInsets get pageHorizontal => EdgeInsets.symmetric(horizontal: padding16.w);
+  static EdgeInsets get pageHorizontal =>
+      EdgeInsets.symmetric(horizontal: padding16.w);
   static EdgeInsets get pagePadding => EdgeInsets.all(padding16.w);
-  static EdgeInsets get cardPadding => EdgeInsets.symmetric(horizontal: padding16.w, vertical: padding16.h);
-  static EdgeInsets get bottomButtonPadding => EdgeInsets.symmetric(horizontal: padding16.w, vertical: paddingSmall.h);
-  static EdgeInsets get sheetPadding => EdgeInsets.symmetric(horizontal: padding16.w, vertical: paddingXLarge.h);
+  static EdgeInsets get cardPadding =>
+      EdgeInsets.symmetric(horizontal: padding16.w, vertical: padding16.h);
+  static EdgeInsets get bottomButtonPadding =>
+      EdgeInsets.symmetric(horizontal: padding16.w, vertical: paddingSmall.h);
+  static EdgeInsets get sheetPadding =>
+      EdgeInsets.symmetric(horizontal: padding16.w, vertical: paddingXLarge.h);
 
   // Grid Spacing
   static const double gridCrossAxisSpacing = 16.0;

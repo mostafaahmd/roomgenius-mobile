@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../app/theme/colors.dart';
 import '../../app/theme/styles.dart';
 
-
 class CustomDropdown extends StatefulWidget {
   final List<String> items;
   final String? initialValue;
@@ -15,7 +14,8 @@ class CustomDropdown extends StatefulWidget {
     super.key,
     required this.items,
     this.initialValue,
-    this.onChanged, this.width,
+    this.onChanged,
+    this.width,
   });
 
   @override

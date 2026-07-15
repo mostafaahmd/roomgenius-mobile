@@ -73,7 +73,10 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   void _tryNavigate() {
-    if (_navigated || !_animationFinished || _resolvedRoute == null || !mounted) {
+    if (_navigated ||
+        !_animationFinished ||
+        _resolvedRoute == null ||
+        !mounted) {
       return;
     }
 

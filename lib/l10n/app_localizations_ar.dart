@@ -39,19 +39,22 @@ class AppLocalizationsAr extends AppLocalizations {
   String get splashTitle => 'روم جينيس';
 
   @override
-  String get splashSubtitle => 'إعادة تصميم الغرف بالذكاء الاصطناعي في خطوات بسيطة.';
+  String get splashSubtitle =>
+      'إعادة تصميم الغرف بالذكاء الاصطناعي في خطوات بسيطة.';
 
   @override
   String get onboardingTitle1 => 'أعد تصميم غرفتك بالذكاء الاصطناعي';
 
   @override
-  String get onboardingSubtitle1 => 'ارفع صورة الغرفة واحصل على أفكار تصميم جديدة.';
+  String get onboardingSubtitle1 =>
+      'ارفع صورة الغرفة واحصل على أفكار تصميم جديدة.';
 
   @override
   String get onboardingTitle2 => 'اختر الستايل المناسب لذوقك';
 
   @override
-  String get onboardingSubtitle2 => 'حدد نوع الغرفة والستايل والمود قبل إنشاء النتيجة.';
+  String get onboardingSubtitle2 =>
+      'حدد نوع الغرفة والستايل والمود قبل إنشاء النتيجة.';
 
   @override
   String get onboardingTitle3 => 'احفظ المشاريع وقارن النتائج';
@@ -63,19 +66,22 @@ class AppLocalizationsAr extends AppLocalizations {
   String get visualizeYourSpace => 'تخيّل مساحتك';
 
   @override
-  String get visualizeYourSpaceSubtitle => 'حوّل غرفتك في ثوانٍ. التقط صورة ودع الذكاء الاصطناعي يقترح تصاميم داخلية مناسبة لذوقك.';
+  String get visualizeYourSpaceSubtitle =>
+      'حوّل غرفتك في ثوانٍ. التقط صورة ودع الذكاء الاصطناعي يقترح تصاميم داخلية مناسبة لذوقك.';
 
   @override
   String get styleInSeconds => 'الستايل في ثوانٍ';
 
   @override
-  String get styleInSecondsSubtitle => 'اختر الأجواء التي تحبها، وسيحوّل الذكاء الاصطناعي غرفتك إلى واحد من هذه الأساليب فورًا.';
+  String get styleInSecondsSubtitle =>
+      'اختر الأجواء التي تحبها، وسيحوّل الذكاء الاصطناعي غرفتك إلى واحد من هذه الأساليب فورًا.';
 
   @override
   String get shopTheLook => 'تسوّق الإطلالة';
 
   @override
-  String get shopTheLookSubtitle => 'يتعرف الذكاء الاصطناعي على الأثاث والديكور في أي صورة لتشتري ما تراه بالضبط.';
+  String get shopTheLookSubtitle =>
+      'يتعرف الذكاء الاصطناعي على الأثاث والديكور في أي صورة لتشتري ما تراه بالضبط.';
 
   @override
   String get minimalist => 'مينيمال';

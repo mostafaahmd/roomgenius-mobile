@@ -25,7 +25,6 @@ class OnboardingBottomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       width: double.infinity,
       margin: EdgeInsets.fromLTRB(20.w, 12.h, 20.w, 16.h),

@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class CustomShimmer extends StatelessWidget {
-
   const CustomShimmer.circular({
-    required double size, super.key,
+    required double size,
+    super.key,
     this.shapeBorder = const CircleBorder(),
   })  : width = size,
         height = size;
 
   const CustomShimmer.rectangular({
-    required this.height, super.key,
+    required this.height,
+    super.key,
     this.width = double.infinity,
     this.shapeBorder = const RoundedRectangleBorder(),
   });

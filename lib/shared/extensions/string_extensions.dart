@@ -31,7 +31,7 @@ extension StringExtensions on String {
 
   // ✅ Trimming
   String get trimAll => replaceAll(RegExp(r'\s+'), '');
-  
+
   String trimExtraSpaces() {
     return trim().replaceAll(RegExp(r'\s+'), ' ');
   }
@@ -45,7 +45,7 @@ extension StringExtensions on String {
   // ✅ Parse safely
   int? toIntOrNull() => int.tryParse(this);
   int toIntOrZero() => int.tryParse(this) ?? 0;
-  
+
   double? toDoubleOrNull() => double.tryParse(this);
   double toDoubleOrZero() => double.tryParse(this) ?? 0.0;
 
@@ -55,12 +55,12 @@ extension StringExtensions on String {
     final parts = split('@');
     final username = parts[0];
     final domain = parts[1];
-    
+
     if (username.length <= 2) return this;
-    
-    final masked = username[0] + 
-                   '*' * (username.length - 2) + 
-                   username[username.length - 1];
+
+    final masked = username[0] +
+        '*' * (username.length - 2) +
+        username[username.length - 1];
     return '$masked@$domain';
   }
 

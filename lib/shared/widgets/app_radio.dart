@@ -14,8 +14,8 @@ class AppRadio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(
-            color: isActive ? AppColors.black : AppColors.gray300),
+        border:
+            Border.all(color: isActive ? AppColors.black : AppColors.gray300),
         shape: BoxShape.circle,
       ),
       child: Container(
@@ -23,8 +23,7 @@ class AppRadio extends StatelessWidget {
         height: 16,
         margin: const EdgeInsets.all(2),
         decoration: BoxDecoration(
-          color:
-              isActive ? AppColors.black : AppColors.gray300,
+          color: isActive ? AppColors.black : AppColors.gray300,
           shape: BoxShape.circle,
         ),
       ),
