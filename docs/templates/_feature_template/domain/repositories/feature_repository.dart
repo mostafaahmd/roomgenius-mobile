@@ -1,4 +1,4 @@
-import '../../../../../lib/core/error/result.dart';
+import 'package:roomgenius_mobile/core/error/result.dart';
 import '../entities/feature_entity.dart';
 
 abstract class FeatureRepository {

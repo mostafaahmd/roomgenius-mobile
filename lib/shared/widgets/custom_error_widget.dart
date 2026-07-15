@@ -3,14 +3,13 @@ import '../../app/theme/colors.dart';
 import '../../app/theme/styles.dart';
 
 class CustomErrorWidget extends StatelessWidget {
-  final String message;
-  final VoidCallback onRetry;
-
   const CustomErrorWidget({
-    super.key,
     required this.message,
     required this.onRetry,
+    super.key,
   });
+  final String message;
+  final VoidCallback onRetry;
 
   @override
   Widget build(BuildContext context) {

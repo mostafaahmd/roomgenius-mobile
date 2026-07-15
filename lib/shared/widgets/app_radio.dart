@@ -4,9 +4,9 @@ import '../../app/theme/colors.dart';
 
 class AppRadio extends StatelessWidget {
   const AppRadio({
-    Key? key,
     required this.isActive,
-  }) : super(key: key);
+    super.key,
+  });
 
   final bool isActive;
 

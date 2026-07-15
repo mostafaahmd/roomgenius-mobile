@@ -115,7 +115,7 @@ class AppTextStyles {
     );
   }
 
-  /****************** Another style *************************/
+  /// **************** Another style ************************
   static TextStyle onBoardingText() {
     return TextStyle(
       fontSize: 14.sp,

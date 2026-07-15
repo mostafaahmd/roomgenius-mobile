@@ -4,11 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../app/theme/styles.dart';
 
 class AppTextFormLabel extends StatelessWidget {
-  final String text;
   const AppTextFormLabel({
-    super.key,
     required this.text,
+    super.key,
   });
+  final String text;
 
   @override
   Widget build(BuildContext context) {

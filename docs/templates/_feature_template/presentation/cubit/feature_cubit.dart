@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../lib/core/error/result.dart';
-import '../../../../../lib/core/presentation/view_state.dart';
+import 'package:roomgenius_mobile/core/error/result.dart';
+import 'package:roomgenius_mobile/core/presentation/view_state.dart';
 import '../../domain/entities/feature_entity.dart';
 import '../../domain/usecases/get_feature_items_usecase.dart';
 

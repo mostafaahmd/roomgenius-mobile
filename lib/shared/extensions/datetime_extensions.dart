@@ -71,7 +71,7 @@ extension DateTimeExtensions on DateTime {
 
   // ✅ Start and end of day
   DateTime get startOfDay {
-    return DateTime(year, month, day, 0, 0, 0, 0, 0);
+    return DateTime(year, month, day);
   }
 
   DateTime get endOfDay {

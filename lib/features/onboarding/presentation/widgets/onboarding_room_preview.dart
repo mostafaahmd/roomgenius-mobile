@@ -23,7 +23,7 @@ class OnboardingRoomPreview extends StatelessWidget {
         borderRadius: BorderRadius.circular(28.r),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.08),
+            color: Colors.black.withValues(alpha: 0.08),
             blurRadius: 20,
             offset: const Offset(0, 12),
           ),
@@ -35,7 +35,7 @@ class OnboardingRoomPreview extends StatelessWidget {
           imagePath,
           fit: BoxFit.cover,
           errorBuilder: (_, __, ___) => Container(
-            color: colorScheme.primary.withOpacity(0.08),
+            color: colorScheme.primary.withValues(alpha: 0.08),
             child: Center(
               child: Icon(
                 Icons.image_outlined,

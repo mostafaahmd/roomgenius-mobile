@@ -3,11 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../app/theme/styles.dart';
 
-void showAppSnackBar(
-    {required BuildContext context,
-    required String message,
-    required IconData icon,
-    required Color backgroundColor}) {
+void showAppSnackBar({
+  required BuildContext context,
+  required String message,
+  required IconData icon,
+  required Color backgroundColor,
+}) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       content: Row(
@@ -26,13 +27,14 @@ void showAppSnackBar(
       backgroundColor: backgroundColor,
       behavior: SnackBarBehavior.floating,
       margin: EdgeInsets.only(
-          bottom: 100.h,
-          left: 16.w,
-          right: 16.w), // Added margin to clear Navbar
+        bottom: 100.h,
+        left: 16.w,
+        right: 16.w,
+      ), // Added margin to clear Navbar
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8.r),
       ),
-      duration: Duration(seconds: 3),
+      duration: const Duration(seconds: 3),
     ),
   );
 }

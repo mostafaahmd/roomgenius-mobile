@@ -5,18 +5,17 @@ import '../../app/theme/colors.dart';
 import '../../app/theme/styles.dart';
 
 class CustomDropdown extends StatefulWidget {
-  final List<String> items;
-  final String? initialValue;
-  final ValueChanged<String?>? onChanged;
-  final double? width;
-
   const CustomDropdown({
-    super.key,
     required this.items,
+    super.key,
     this.initialValue,
     this.onChanged,
     this.width,
   });
+  final List<String> items;
+  final String? initialValue;
+  final ValueChanged<String?>? onChanged;
+  final double? width;
 
   @override
   State<CustomDropdown> createState() => _CustomDropdownState();
@@ -60,16 +59,18 @@ class _CustomDropdownState extends State<CustomDropdown> {
           fontSize: 14.sp,
         ),
         items: widget.items
-            .map((item) => DropdownMenuItem<String>(
-                  value: item,
-                  child: Text(
-                    item,
-                    style: AppTextStyles.mediumText(context).copyWith(
-                      color: AppColors.black,
-                      fontSize: 14.sp,
-                    ),
+            .map(
+              (item) => DropdownMenuItem<String>(
+                value: item,
+                child: Text(
+                  item,
+                  style: AppTextStyles.mediumText(context).copyWith(
+                    color: AppColors.black,
+                    fontSize: 14.sp,
                   ),
-                ))
+                ),
+              ),
+            )
             .toList(),
         onChanged: (value) {
           setState(() {

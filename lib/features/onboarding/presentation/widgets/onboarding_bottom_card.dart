@@ -30,12 +30,12 @@ class OnboardingBottomCard extends StatelessWidget {
       margin: EdgeInsets.fromLTRB(20.w, 12.h, 20.w, 16.h),
       padding: EdgeInsets.fromLTRB(20.w, 18.h, 20.w, 18.h),
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.surface.withOpacity(0.20)),
+        border: Border.all(color: AppColors.surface.withValues(alpha: 0.20)),
         color: AppColors.surfaceSoft,
         borderRadius: BorderRadius.circular(28.r),
         boxShadow: [
           BoxShadow(
-            color: AppColors.black.withOpacity(0.2),
+            color: AppColors.black.withValues(alpha: 0.2),
             blurRadius: 18,
             offset: const Offset(0, 8),
           ),
@@ -58,7 +58,7 @@ class OnboardingBottomCard extends StatelessWidget {
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   height: 1.5,
-                  color: AppColors.black.withOpacity(0.5),
+                  color: AppColors.black.withValues(alpha: 0.5),
                 ),
           ),
           SizedBox(height: 18.h),
@@ -74,7 +74,7 @@ class OnboardingBottomCard extends StatelessWidget {
                 gradient: LinearGradient(
                   colors: [
                     AppColors.primary,
-                    AppColors.primary.withOpacity(0.88),
+                    AppColors.primary.withValues(alpha: 0.88),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(18.r),
