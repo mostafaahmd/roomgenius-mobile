@@ -7,6 +7,9 @@ class RoutePaths {
   static const String splash = '/';
   static const String onboarding = '/onboarding';
   static const String home = '/home';
+  static const String rooms = '/rooms';
+  static const String createRoom = '/rooms/create';
+  static const String roomDetails = '/rooms/:id';
 }
 
 /// Constants for the app's route names
@@ -16,4 +19,7 @@ class RouteNames {
   static const String splash = 'splash';
   static const String onboarding = 'onboarding';
   static const String home = 'home';
+  static const String rooms = 'rooms';
+  static const String createRoom = 'createRoom';
+  static const String roomDetails = 'roomDetails';
 }

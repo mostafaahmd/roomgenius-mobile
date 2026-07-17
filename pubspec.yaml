@@ -125,7 +125,6 @@ flutter_icons:
 flutter_native_splash:
   color: "#FFB78CFF"
   color_dark: "#FFB78CFF"
-  image: assets/images/branding/splash_logo1.png
   android: true
   ios: true
   web: false
@@ -134,7 +133,7 @@ flutter_native_splash:
   android_12:
     color: "#FFB78CFF"
     color_dark: "#FFB78CFF"
-    image: assets/images/branding/splash_logo1.png
+    
 
 # ✅ Keep flutter_intl config
 #flutter_intl:
