@@ -164,7 +164,7 @@ class Validators {
     // Check file extension
     final validExtensions = ['jpg', 'jpeg', 'png'];
     final extension = filePath.split('.').last.toLowerCase();
-    
+
     if (!validExtensions.contains(extension)) {
       return 'Image must be JPG, JPEG, or PNG format';
     }
@@ -187,7 +187,7 @@ class Validators {
     // Check file extension
     final validExtensions = ['mp4', 'mov', 'avi', 'mkv', 'webm'];
     final extension = filePath.split('.').last.toLowerCase();
-    
+
     if (!validExtensions.contains(extension)) {
       return 'Video must be MP4, MOV, AVI, MKV, or WEBM format';
     }

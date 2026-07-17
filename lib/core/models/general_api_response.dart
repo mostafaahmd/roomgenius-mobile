@@ -1,5 +1,4 @@
 class GeneralApiResponse<T> {
-
   factory GeneralApiResponse.fromJson(
     Map<String, dynamic> json,
     T Function(Object? json) fromJsonT,

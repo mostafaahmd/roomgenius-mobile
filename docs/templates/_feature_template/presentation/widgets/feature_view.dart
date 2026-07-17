@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../lib/core/presentation/view_state.dart';
+import 'package:roomgenius_mobile/core/presentation/view_state.dart';
 import '../../domain/entities/feature_entity.dart';
 import '../cubit/feature_cubit.dart';
 

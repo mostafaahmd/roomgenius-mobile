@@ -4,6 +4,16 @@ import 'package:roomgenius_mobile/app/theme/styles.dart';
 import '../../app/theme/colors.dart';
 
 class AppTextButton extends StatelessWidget {
+  const AppTextButton({
+    required this.buttonText,
+    required this.onPressed,
+    super.key,
+    this.borderRadius,
+    this.backgroundColor,
+    this.buttonHeight,
+    this.buttonWidth,
+    this.textStyle,
+  });
   final double? borderRadius;
   final Color? backgroundColor;
   final double? buttonWidth;
@@ -11,17 +21,6 @@ class AppTextButton extends StatelessWidget {
   final String buttonText;
   final TextStyle? textStyle;
   final VoidCallback onPressed;
-
-  const AppTextButton({
-    super.key,
-    this.borderRadius,
-    this.backgroundColor,
-    this.buttonHeight,
-    this.buttonWidth,
-    required this.buttonText,
-    required this.onPressed,
-    this.textStyle,
-  });
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +37,11 @@ class AppTextButton extends StatelessWidget {
           ),
           elevation: 0,
         ),
-        child: Text(buttonText,
-            style: textStyle ??
-                AppTextStyles.boldText(context).copyWith(color: Colors.white)),
+        child: Text(
+          buttonText,
+          style: textStyle ??
+              AppTextStyles.boldText(context).copyWith(color: Colors.white),
+        ),
       ),
     );
   }

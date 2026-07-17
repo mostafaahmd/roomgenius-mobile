@@ -1,4 +1,3 @@
-
 void setupFeatureModule() {
   // Register data sources.
   // Register repository implementation.

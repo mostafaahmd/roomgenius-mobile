@@ -50,7 +50,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     super.dispose();
   }
 
-  Future<void> _goToNextPage(OnboardingCubit cubit, OnboardingState state) async {
+  Future<void> _goToNextPage(
+    OnboardingCubit cubit,
+    OnboardingState state,
+  ) async {
     if (state.isLastStep) {
       await cubit.complete();
       return;
@@ -120,7 +123,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                       ? null
                                       : () async {
                                           await _pageController.previousPage(
-                                            duration: const Duration(milliseconds: 280),
+                                            duration: const Duration(
+                                              milliseconds: 280,
+                                            ),
                                             curve: Curves.easeOutCubic,
                                           );
                                         },

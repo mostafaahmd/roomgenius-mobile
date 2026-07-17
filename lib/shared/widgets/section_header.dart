@@ -8,8 +8,8 @@ import '../../app/theme/styles.dart';
 /// Section header with optional action pill (e.g. "See All").
 class SectionHeader extends StatelessWidget {
   const SectionHeader({
-    super.key,
     required this.title,
+    super.key,
     this.showAction = true,
     this.actionText,
     this.onActionTap,

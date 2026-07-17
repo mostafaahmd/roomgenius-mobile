@@ -7,14 +7,15 @@ class Breakpoints {
 }
 
 class ResponsiveWidget extends StatelessWidget {
+  const ResponsiveWidget({
+    required this.mobile,
+    required this.tablet,
+    required this.desktop,
+    super.key,
+  });
   final Widget mobile;
   final Widget tablet;
   final Widget desktop;
-  const ResponsiveWidget(
-      {super.key,
-      required this.mobile,
-      required this.tablet,
-      required this.desktop});
 
   static bool isMobile(BuildContext context) =>
       MediaQuery.of(context).size.width < Breakpoints.mobile;

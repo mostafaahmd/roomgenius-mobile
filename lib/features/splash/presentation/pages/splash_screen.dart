@@ -73,7 +73,10 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   void _tryNavigate() {
-    if (_navigated || !_animationFinished || _resolvedRoute == null || !mounted) {
+    if (_navigated ||
+        !_animationFinished ||
+        _resolvedRoute == null ||
+        !mounted) {
       return;
     }
 
@@ -136,14 +139,14 @@ class _SplashScreenState extends State<SplashScreen>
                       width: 90.w,
                       height: 90.w,
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.10),
+                        color: Colors.white.withValues(alpha: 0.10),
                         borderRadius: BorderRadius.circular(24.r),
                         border: Border.all(
-                          color: Colors.white.withOpacity(0.18),
+                          color: Colors.white.withValues(alpha: 0.18),
                         ),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.white.withOpacity(0.06),
+                            color: Colors.white.withValues(alpha: 0.06),
                             blurRadius: 22,
                             spreadRadius: 1,
                           ),
@@ -183,7 +186,7 @@ class _SplashScreenState extends State<SplashScreen>
                     width: 190.w,
                     height: 4.h,
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.16),
+                      color: Colors.white.withValues(alpha: 0.16),
                       borderRadius: BorderRadius.circular(999.r),
                     ),
                     child: AnimatedBuilder(
@@ -207,7 +210,7 @@ class _SplashScreenState extends State<SplashScreen>
                   Text(
                     l10n.poweredByAi,
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.90),
+                      color: Colors.white.withValues(alpha: 0.90),
                       fontSize: 13.sp,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 3.2,

@@ -13,8 +13,8 @@ class SplashCubit extends Cubit<SplashState> {
 
   /// resolveTarget method simulates a loading process by delaying for 2 seconds, then checks if the user has seen the onboarding screens before and emits a new state with the appropriate route to navigate to.
   Future<void> resolveTarget() async {
-    final onboardingSeen = await _localStorage
-            .readBool(CacheKeys.onboardingSeen) ?? false;
+    final onboardingSeen =
+        await _localStorage.readBool(CacheKeys.onboardingSeen) ?? false;
     await Future.delayed(const Duration(seconds: 3));
     emit(
       state.copyWith(
