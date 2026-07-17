@@ -5,8 +5,8 @@ import '../constants/app_defaults.dart';
 
 class AppSettingsListTile extends StatelessWidget {
   const AppSettingsListTile({
-    super.key,
     required this.label,
+    super.key,
     this.trailing,
     this.onTap,
   });
@@ -30,9 +30,11 @@ class AppSettingsListTile extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(label,
-                      style: AppTextStyles.regularText(context)
-                          .copyWith(fontSize: 16)),
+                  Text(
+                    label,
+                    style: AppTextStyles.regularText(context)
+                        .copyWith(fontSize: 16),
+                  ),
                   const Spacer(),
                   if (trailing != null) trailing!,
                 ],

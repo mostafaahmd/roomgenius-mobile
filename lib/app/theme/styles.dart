@@ -97,7 +97,7 @@ class AppTextStyles {
     return _getLocalizedTextStyle(
       context,
       fontWeight: FontWeightHelper.regular,
-      color: color ?? AppColors.whiteColor,
+      color: color ?? AppColors.white,
       fontSize: fontSize?.sp ?? 18.sp,
     );
   }
@@ -110,17 +110,17 @@ class AppTextStyles {
     return _getLocalizedTextStyle(
       context,
       fontWeight: FontWeightHelper.regular,
-      color: color ?? AppColors.redColor,
+      color: color ?? AppColors.error,
       fontSize: fontSize?.sp ?? 11.sp,
     );
   }
 
-  /****************** Another style *************************/
+  /// **************** Another style ************************
   static TextStyle onBoardingText() {
     return TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeightHelper.regular,
-      color: AppColors.greyColor,
+      color: AppColors.gray,
     );
   }
 
@@ -128,7 +128,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeightHelper.regular,
-      color: AppColors.whiteColor,
+      color: AppColors.white,
     );
   }
 
@@ -136,7 +136,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeightHelper.regular,
-      color: AppColors.greyColor,
+      color: AppColors.gray,
     );
   }
 
@@ -173,7 +173,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: 15.sp,
       fontWeight: FontWeightHelper.bold,
-      color: AppColors.whiteColor,
+      color: AppColors.white,
     );
   }
 
@@ -181,7 +181,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: 32.sp,
       fontWeight: FontWeightHelper.medium,
-      color: AppColors.blackColor,
+      color: AppColors.black,
     );
   }
 
@@ -189,7 +189,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: 20.sp,
       fontWeight: FontWeightHelper.medium,
-      color: AppColors.whiteColor,
+      color: AppColors.white,
     );
   }
 
@@ -197,7 +197,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: 26.sp,
       fontWeight: FontWeightHelper.bold,
-      color: AppColors.blackColor,
+      color: AppColors.black,
     );
   }
 
@@ -205,7 +205,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: 18.sp,
       fontWeight: FontWeightHelper.bold,
-      color: AppColors.blackColor,
+      color: AppColors.black,
     );
   }
 
@@ -213,7 +213,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: 18.sp,
       fontWeight: FontWeightHelper.semiBold,
-      color: AppColors.blackColor,
+      color: AppColors.black,
     );
   }
 
@@ -221,7 +221,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: 16.sp,
       fontWeight: FontWeightHelper.regular,
-      color: AppColors.blackColor,
+      color: AppColors.black,
     );
   }
 

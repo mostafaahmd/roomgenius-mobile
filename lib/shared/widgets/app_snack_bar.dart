@@ -7,7 +7,7 @@ void showAppSnackBar({
   required BuildContext context,
   required String message,
   required IconData icon,
-  required Color backgroundColor
+  required Color backgroundColor,
 }) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
@@ -18,18 +18,23 @@ void showAppSnackBar({
           Expanded(
             child: Text(
               message,
-              style: AppTextStyles.regularText(context).copyWith(color: Colors.white,fontSize: 12),
+              style: AppTextStyles.regularText(context)
+                  .copyWith(color: Colors.white, fontSize: 12),
             ),
           ),
         ],
       ),
       backgroundColor: backgroundColor,
       behavior: SnackBarBehavior.floating,
-      margin: EdgeInsets.only(bottom: 100.h, left: 16.w, right: 16.w), // Added margin to clear Navbar
+      margin: EdgeInsets.only(
+        bottom: 100.h,
+        left: 16.w,
+        right: 16.w,
+      ), // Added margin to clear Navbar
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8.r),
       ),
-      duration: Duration(seconds: 3),
+      duration: const Duration(seconds: 3),
     ),
   );
 }

@@ -4,19 +4,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../app/theme/colors.dart';
 import '../../app/theme/styles.dart';
 
-
 class CustomDropdown extends StatefulWidget {
+  const CustomDropdown({
+    required this.items,
+    super.key,
+    this.initialValue,
+    this.onChanged,
+    this.width,
+  });
   final List<String> items;
   final String? initialValue;
   final ValueChanged<String?>? onChanged;
   final double? width;
-
-  const CustomDropdown({
-    super.key,
-    required this.items,
-    this.initialValue,
-    this.onChanged, this.width,
-  });
 
   @override
   State<CustomDropdown> createState() => _CustomDropdownState();
@@ -56,20 +55,22 @@ class _CustomDropdownState extends State<CustomDropdown> {
       child: DropdownButtonFormField<String>(
         value: selectedValue,
         style: AppTextStyles.mediumText(context).copyWith(
-          color: AppColors.blackColor,
+          color: AppColors.black,
           fontSize: 14.sp,
         ),
         items: widget.items
-            .map((item) => DropdownMenuItem<String>(
-                  value: item,
-                  child: Text(
-                    item,
-                    style: AppTextStyles.mediumText(context).copyWith(
-                      color: AppColors.blackColor,
-                      fontSize: 14.sp,
-                    ),
+            .map(
+              (item) => DropdownMenuItem<String>(
+                value: item,
+                child: Text(
+                  item,
+                  style: AppTextStyles.mediumText(context).copyWith(
+                    color: AppColors.black,
+                    fontSize: 14.sp,
                   ),
-                ))
+                ),
+              ),
+            )
             .toList(),
         onChanged: (value) {
           setState(() {
@@ -81,7 +82,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
         },
         decoration: InputDecoration(
           filled: true,
-          fillColor: AppColors.whiteColor,
+          fillColor: AppColors.white,
           isDense: true,
           contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
           border: OutlineInputBorder(

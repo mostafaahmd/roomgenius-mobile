@@ -23,8 +23,10 @@ extension BuildContextExtensions on BuildContext {
   bool get isTablet => screenWidth >= 600 && screenWidth < 1024;
   bool get isDesktop => screenWidth >= 1024;
 
-  bool get isPortrait => MediaQuery.of(this).orientation == Orientation.portrait;
-  bool get isLandscape => MediaQuery.of(this).orientation == Orientation.landscape;
+  bool get isPortrait =>
+      MediaQuery.of(this).orientation == Orientation.portrait;
+  bool get isLandscape =>
+      MediaQuery.of(this).orientation == Orientation.landscape;
 
   TextDirection get textDirection => Directionality.of(this);
   bool get isRtl => textDirection == TextDirection.rtl;

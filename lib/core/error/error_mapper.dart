@@ -17,9 +17,10 @@ class ErrorMapper {
       final apiError = _tryParseApiError(responseData);
 
       final serverMessage = apiError?.message?.trim();
-      final fallbackMessage = (serverMessage != null && serverMessage.isNotEmpty)
-          ? serverMessage
-          : (error.message ?? 'Unexpected error occurred');
+      final fallbackMessage =
+          (serverMessage != null && serverMessage.isNotEmpty)
+              ? serverMessage
+              : (error.message ?? 'Unexpected error occurred');
 
       switch (error.type) {
         case DioExceptionType.connectionTimeout:
@@ -71,8 +72,7 @@ class ErrorMapper {
 
     return switch (exception) {
       NetworkException(:final message) => NetworkFailure(message),
-      RequestTimeoutException(:final message) =>
-        RequestTimeoutFailure(message),
+      RequestTimeoutException(:final message) => RequestTimeoutFailure(message),
       UnauthorizedException(:final message) => UnauthorizedFailure(message),
       ValidationException(:final message, :final fieldErrors) =>
         ValidationFailure(message, fieldErrors: fieldErrors),

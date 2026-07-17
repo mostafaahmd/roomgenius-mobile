@@ -5,16 +5,15 @@ import '../constants/app_defaults.dart';
 import 'skeleton.dart';
 
 class NetworkImageWithLoader extends StatelessWidget {
-  final BoxFit fit;
-
   /// This widget is used for displaying network image with a placeholder
   const NetworkImageWithLoader(
     this.src, {
-    Key? key,
+    super.key,
     this.fit = BoxFit.cover,
     this.radius = AppDefaults.radius,
     this.borderRadius,
-  }) : super(key: key);
+  });
+  final BoxFit fit;
 
   final String src;
   final double radius;

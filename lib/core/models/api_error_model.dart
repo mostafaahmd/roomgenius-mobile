@@ -1,5 +1,4 @@
 class ApiErrorModel {
-
   factory ApiErrorModel.fromJson(Map<String, dynamic> json) {
     return ApiErrorModel(
       success: json['success'] is bool
@@ -38,11 +37,14 @@ class ApiErrorModel {
 }
 
 class ApiErrorField {
-
   factory ApiErrorField.fromJson(Map<String, dynamic> json) {
     return ApiErrorField(
-      field: json['field'] is String ? json['field'] as String : json['field']?.toString() ?? '',
-      message: json['message'] is String ? json['message'] as String : json['message']?.toString() ?? '',
+      field: json['field'] is String
+          ? json['field'] as String
+          : json['field']?.toString() ?? '',
+      message: json['message'] is String
+          ? json['message'] as String
+          : json['message']?.toString() ?? '',
     );
   }
 

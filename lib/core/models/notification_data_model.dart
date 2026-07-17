@@ -1,5 +1,4 @@
 class NotificationDataModel {
-
   NotificationDataModel.fromJson(Map<String, dynamic> json) {
     deviceToken = json['deviceToken'] as String?;
     deviceType = json['deviceType'] as String?;

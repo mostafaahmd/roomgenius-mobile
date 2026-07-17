@@ -5,4 +5,8 @@ class CacheKeys {
   static const String fcmToken = 'fcm_token';
   static const String languageVisited = 'lang_visited';
   static const String themeBlack = 'use_black_theme';
+  static const String appLocale = 'app_locale';
+  static const String onboardingSeen = 'onboarding_seen';
+  static const String splashSeen = 'splash_seen';
+  static const String isDarkMode = 'is_dark_mode';
 }

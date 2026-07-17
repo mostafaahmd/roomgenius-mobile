@@ -7,8 +7,8 @@ import '../../app/theme/colors.dart';
 // app section card
 class AppSectionCard extends StatelessWidget {
   const AppSectionCard({
-    super.key,
     required this.child,
+    super.key,
     this.margin,
     this.padding,
     this.title,
@@ -27,7 +27,7 @@ class AppSectionCard extends StatelessWidget {
       margin: margin ?? EdgeInsets.symmetric(horizontal: 20.w),
       padding: padding ?? EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: AppColors.whiteColor,
+        color: AppColors.white,
         borderRadius: BorderRadius.circular(16.r),
       ),
       child: Column(
@@ -60,19 +60,21 @@ class AppSectionCard extends StatelessWidget {
 // app menu tile widget for side menu / settings
 class AppMenuTile extends StatelessWidget {
   const AppMenuTile({
-    super.key,
     required this.title,
-    this.iconPath, 
-    this.icon, 
-    this.leading, 
+    super.key,
+    this.iconPath,
+    this.icon,
+    this.leading,
     this.onTap,
     this.showArrow = true,
     this.showLock = false,
     this.isDisabled = false,
     this.isDanger = false,
     this.trailing,
-  }) : assert(iconPath != null || icon != null || leading != null,
-            'Provide either iconPath, icon, or leading');
+  }) : assert(
+          iconPath != null || icon != null || leading != null,
+          'Provide either iconPath, icon, or leading',
+        );
 
   final String title;
 
@@ -98,9 +100,9 @@ class AppMenuTile extends StatelessWidget {
     final effectiveOnTap = isDisabled ? null : onTap;
 
     final titleColor = isDanger
-        ? AppColors.errorRedColor
+        ? AppColors.error
         : isDisabled
-            ? AppColors.greyColor.withOpacity(0.6)
+            ? AppColors.gray.withValues(alpha: 0.6)
             : AppColors.textColor;
 
     return ListTile(
@@ -117,9 +119,9 @@ class AppMenuTile extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: AppColors.greyColor, width: 0.5),
+                  border: Border.all(color: AppColors.gray, width: 0.5),
                 ),
-                child: Icon(Icons.lock, size: 12, color: AppColors.greyColor),
+                child: const Icon(Icons.lock, size: 12, color: AppColors.gray),
               ),
             ),
         ],
@@ -137,7 +139,7 @@ class AppMenuTile extends StatelessWidget {
               ? Icon(
                   Icons.arrow_forward_ios_rounded,
                   size: 16.sp,
-                  color: AppColors.greyColor.withOpacity(0.6),
+                  color: AppColors.gray.withValues(alpha: 0.6),
                 )
               : null),
       onTap: effectiveOnTap,
@@ -149,13 +151,13 @@ class AppMenuTile extends StatelessWidget {
 // app menu switch tile widget for account info
 class AppMenuSwitchTile extends StatelessWidget {
   const AppMenuSwitchTile({
-    super.key,
     required this.title,
+    required this.value,
+    required this.onChanged,
+    super.key,
     this.iconPath,
     this.icon,
     this.leading,
-    required this.value,
-    required this.onChanged,
     this.isDisabled = false,
     this.isLoading = false,
   }) : assert(iconPath != null || icon != null || leading != null);

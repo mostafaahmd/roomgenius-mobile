@@ -1,35 +1,24 @@
 class AppImages {
-  static const roundedLogo = 'https://i.imgur.com/9EsY2t6.png';
+  const AppImages._();
 
-  /* <---- Homepage banner -----> */
-  static const homePageBanner = 'https://i.imgur.com/8hBIsS5.png';
+  static const String roundedLogo = 'https://i.imgur.com/9EsY2t6.png';
 
-  /* <---- Image used on unknown page -----> */
-  static const illustrations404 = 'https://i.imgur.com/SGTzEiC.png';
+  static const String splashLogo = 'assets/images/branding/splash_logo1.png';
 
-  /* <---- INTRO LOGIN BACKGROUND IMAGES -----> */
-  static const introBackground1 = 'https://i.imgur.com/YQ9twZx.png';
-  static const introBackground2 = 'https://i.imgur.com/3hgB1or.png';
+  static const String homePageBanner = 'https://i.imgur.com/8hBIsS5.png';
 
-  /* <---- ONBOARDING IMAGES -----> */
-  static const forrera = 'assets/images/forrera.png';
-  static const order_logo = 'assets/images/order_logo.png';
-  static const delete_warrning = 'assets/images/delete_warrning.png';
-  static const order_placed = 'assets/images/order_placed.png';
+  static const String illustrations404 = 'https://i.imgur.com/SGTzEiC.png';
 
-  static const onboarding1 = 'assets/images/intro/1.png';
-  static const onboarding2 = 'assets/images/intro/2.png';
-  static const onboarding3 = 'assets/images/intro/3.png';
+  static const String introBackground1 = 'https://i.imgur.com/YQ9twZx.png';
+  static const String introBackground2 = 'https://i.imgur.com/3hgB1or.png';
 
-  /* <---- Other Illustrations -----> */
-  static const numberVerfication = 'https://i.imgur.com/tCCmY3I.png';
-  static const verified = 'https://i.imgur.com/vF1jB6b.png';
+  static const String onboarding1 = 'assets/images/onboarding/onboarding_1.png';
+  static const String onboarding2 = 'assets/images/onboarding/onboarding_2.png';
+  static const String onboarding3 = 'assets/images/onboarding/onboarding_3.png';
 
-  /* <---- Coupon Backgrounds -----> */
-  static const couponBackgrounds = [
-    'assets/images/coupon_background_1.png',
-    'assets/images/coupon_background_2.png',
-    'assets/images/coupon_background_3.png',
-    'assets/images/coupon_background_4.png',
+  static const List<String> onboardingAssets = [
+    onboarding1,
+    onboarding2,
+    onboarding3,
   ];
 }

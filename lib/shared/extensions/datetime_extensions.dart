@@ -12,7 +12,7 @@ extension DateTimeExtensions on DateTime {
   String get toDateString => format('yyyy-MM-dd'); // 2025-11-27
   String get toTimeString => format('HH:mm'); // 14:30
   String get toDateTimeString => format('yyyy-MM-dd HH:mm');
-  
+
   // ✅ Arabic-friendly formats
   String toArabicDate() => format('dd/MM/yyyy'); // 27/11/2025
   String toArabicTime() => format('hh:mm a'); // 02:30 PM
@@ -26,22 +26,32 @@ extension DateTimeExtensions on DateTime {
       return short ? 'now' : 'just now';
     } else if (difference.inMinutes < 60) {
       final minutes = difference.inMinutes;
-      return short ? '${minutes}m' : '$minutes ${minutes == 1 ? 'minute' : 'minutes'} ago';
+      return short
+          ? '${minutes}m'
+          : '$minutes ${minutes == 1 ? 'minute' : 'minutes'} ago';
     } else if (difference.inHours < 24) {
       final hours = difference.inHours;
-      return short ? '${hours}h' : '$hours ${hours == 1 ? 'hour' : 'hours'} ago';
+      return short
+          ? '${hours}h'
+          : '$hours ${hours == 1 ? 'hour' : 'hours'} ago';
     } else if (difference.inDays < 7) {
       final days = difference.inDays;
       return short ? '${days}d' : '$days ${days == 1 ? 'day' : 'days'} ago';
     } else if (difference.inDays < 30) {
       final weeks = (difference.inDays / 7).floor();
-      return short ? '${weeks}w' : '$weeks ${weeks == 1 ? 'week' : 'weeks'} ago';
+      return short
+          ? '${weeks}w'
+          : '$weeks ${weeks == 1 ? 'week' : 'weeks'} ago';
     } else if (difference.inDays < 365) {
       final months = (difference.inDays / 30).floor();
-      return short ? '${months}mo' : '$months ${months == 1 ? 'month' : 'months'} ago';
+      return short
+          ? '${months}mo'
+          : '$months ${months == 1 ? 'month' : 'months'} ago';
     } else {
       final years = (difference.inDays / 365).floor();
-      return short ? '${years}y' : '$years ${years == 1 ? 'year' : 'years'} ago';
+      return short
+          ? '${years}y'
+          : '$years ${years == 1 ? 'year' : 'years'} ago';
     }
   }
 
@@ -54,14 +64,14 @@ extension DateTimeExtensions on DateTime {
   // ✅ Check if date is yesterday
   bool get isYesterday {
     final yesterday = DateTime.now().subtract(const Duration(days: 1));
-    return year == yesterday.year && 
-           month == yesterday.month && 
-           day == yesterday.day;
+    return year == yesterday.year &&
+        month == yesterday.month &&
+        day == yesterday.day;
   }
 
   // ✅ Start and end of day
   DateTime get startOfDay {
-    return DateTime(year, month, day, 0, 0, 0, 0, 0);
+    return DateTime(year, month, day);
   }
 
   DateTime get endOfDay {

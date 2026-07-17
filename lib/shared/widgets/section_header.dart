@@ -8,8 +8,8 @@ import '../../app/theme/styles.dart';
 /// Section header with optional action pill (e.g. "See All").
 class SectionHeader extends StatelessWidget {
   const SectionHeader({
-    super.key,
     required this.title,
+    super.key,
     this.showAction = true,
     this.actionText,
     this.onActionTap,
@@ -54,7 +54,7 @@ class SectionHeader extends StatelessWidget {
                 AppTextStyles.boldText(
                   context,
                   fontSize: 18,
-                  color: AppColors.brandDarkBlue,
+                  color: AppColors.secondary,
                 ),
           ),
         ),
@@ -68,7 +68,7 @@ class SectionHeader extends StatelessWidget {
               padding: actionPadding ??
                   EdgeInsets.symmetric(horizontal: 14.w, vertical: 8.h),
               decoration: BoxDecoration(
-                color: actionBgColor ?? AppColors.chipBg,
+                color: actionBgColor ?? AppColors.primary,
                 borderRadius: BorderRadius.circular(actionRadius ?? 999.r),
               ),
               child: Text(
@@ -77,7 +77,7 @@ class SectionHeader extends StatelessWidget {
                     AppTextStyles.boldText(
                       context,
                       fontSize: 12,
-                      color: AppColors.chipText,
+                      color: AppColors.textColor,
                     ),
               ),
             ),

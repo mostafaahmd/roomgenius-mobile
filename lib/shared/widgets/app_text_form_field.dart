@@ -5,6 +5,26 @@ import '../../app/theme/colors.dart';
 import '../../app/theme/styles.dart';
 
 class AppTextFormField extends StatelessWidget {
+  const AppTextFormField({
+    required this.validator,
+    super.key,
+    this.contentPadding,
+    this.inputTextStyle,
+    this.autofocus = false,
+    this.keyboardType = TextInputType.text,
+    this.isObscureText,
+    this.prefixIconData,
+    this.prefixIcon,
+    this.backgroundColor,
+    this.controller,
+    this.suffixIcon,
+    this.hintText,
+    this.autoValidate = true,
+    this.textInputAction,
+    this.onFieldSubmitted,
+    this.onTap,
+    this.readOnly,
+  });
   final bool autoValidate;
   final EdgeInsetsGeometry? contentPadding;
   final String? hintText;
@@ -23,27 +43,6 @@ class AppTextFormField extends StatelessWidget {
   final VoidCallback? onTap;
   final bool? readOnly;
 
-  const AppTextFormField({
-    super.key,
-    this.contentPadding,
-    this.inputTextStyle,
-    this.autofocus = false,
-    this.keyboardType = TextInputType.text,
-    this.isObscureText,
-    this.prefixIconData,
-    this.prefixIcon,
-    this.backgroundColor,
-    this.controller,
-    required this.validator,
-    this.suffixIcon,
-    this.hintText,
-    this.autoValidate = true,
-    this.textInputAction,
-    this.onFieldSubmitted,
-    this.onTap,
-    this.readOnly,
-  });
-
   @override
   Widget build(BuildContext context) {
     // Priority: prefixIcon (Widget) > prefixIconData (IconData)
@@ -51,7 +50,7 @@ class AppTextFormField extends StatelessWidget {
         (prefixIconData != null
             ? Icon(
                 prefixIconData,
-                color: AppColors.iconBackground, // Gray color #6D6D6D
+                color: AppColors.gray, // Gray color #6D6D6D
                 size: 20.sp,
               )
             : null);
@@ -93,21 +92,21 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(39.r),
           borderSide: BorderSide(
-            color: AppColors.primary.withOpacity(0.3),
+            color: AppColors.primary.withValues(alpha: 0.3),
             width: 1.5,
           ),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(39.r),
           borderSide: const BorderSide(
-            color: AppColors.dangerColor,
+            color: AppColors.error,
             width: 1.5,
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(39.r),
           borderSide: const BorderSide(
-            color: AppColors.dangerColor,
+            color: AppColors.error,
             width: 1.5,
           ),
         ),
