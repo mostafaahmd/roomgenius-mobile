@@ -2,6 +2,15 @@ import 'furniture_category.dart';
 import 'furniture_status.dart';
 
 class FurnitureItem {
+  factory FurnitureItem.fromJson(Map<String, dynamic> json) {
+    return FurnitureItem(
+      id: json['id'] as String? ?? '',
+      title: json['title'] as String? ?? '',
+      estimatedPrice: _toDouble(json['estimatedPrice']),
+      category: FurnitureCategory.fromValue(json['category'] as String?),
+      status: FurnitureStatus.fromValue(json['status'] as String?),
+    );
+  }
   const FurnitureItem({
     required this.id,
     required this.title,
@@ -40,16 +49,6 @@ class FurnitureItem {
       'category': category.value,
       'status': status.value,
     };
-  }
-
-  factory FurnitureItem.fromJson(Map<String, dynamic> json) {
-    return FurnitureItem(
-      id: json['id'] as String? ?? '',
-      title: json['title'] as String? ?? '',
-      estimatedPrice: _toDouble(json['estimatedPrice']),
-      category: FurnitureCategory.fromValue(json['category'] as String?),
-      status: FurnitureStatus.fromValue(json['status'] as String?),
-    );
   }
 }
 

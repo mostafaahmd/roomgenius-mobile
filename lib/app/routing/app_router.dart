@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:roomgenius_mobile/app/di/service_locator.dart';
 import 'package:roomgenius_mobile/app/routing/routes.dart';
-import 'package:roomgenius_mobile/features/home/presentation/pages/home_screen.dart';
 import 'package:roomgenius_mobile/features/onboarding/presentation/pages/onboarding_screen.dart';
 import 'package:roomgenius_mobile/features/room_plans/presentation/cubit/room_plans_cubit.dart';
 import 'package:roomgenius_mobile/features/room_plans/presentation/pages/create_room_plan_screen.dart';
@@ -30,11 +29,11 @@ final GoRouter appRouter = GoRouter(
       path: RoutePaths.home,
       name: RouteNames.home,
       builder: (context, state) {
-    return BlocProvider(
-      create: (_) => getIt<RoomPlansCubit>()..loadRoomPlans(),
-      child: const RoomsScreen(),
-    );
-  },
+        return BlocProvider(
+          create: (_) => getIt<RoomPlansCubit>()..loadRoomPlans(),
+          child: const RoomsScreen(),
+        );
+      },
     ),
     GoRoute(
       path: RoutePaths.rooms,
