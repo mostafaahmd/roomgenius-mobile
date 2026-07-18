@@ -4,7 +4,6 @@ import 'furniture_status.dart';
 import 'room_type.dart';
 
 class RoomPlan {
-
   factory RoomPlan.fromJson(Map<String, dynamic> json) {
     final checklistJson = json['checklist'];
 

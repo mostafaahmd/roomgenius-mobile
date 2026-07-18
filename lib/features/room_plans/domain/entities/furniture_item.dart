@@ -2,7 +2,6 @@ import 'furniture_category.dart';
 import 'furniture_status.dart';
 
 class FurnitureItem {
-
   factory FurnitureItem.fromJson(Map<String, dynamic> json) {
     return FurnitureItem(
       id: json['id'] as String? ?? '',
