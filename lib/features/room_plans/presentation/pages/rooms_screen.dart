@@ -50,7 +50,10 @@ class RoomsScreen extends StatelessWidget {
                   ),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: () {
-                    context.push('/rooms/${plan.id}');
+                    context.pushNamed(
+                      RouteNames.roomDetails,
+                      pathParameters: {'id': plan.id},
+                    );
                   },
                 ),
               );
@@ -60,7 +63,7 @@ class RoomsScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          context.push(RoutePaths.createRoom);
+          context.pushNamed(RouteNames.createRoom);
         },
         label: const Text('Create Room'),
         icon: const Icon(Icons.add),
