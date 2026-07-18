@@ -50,7 +50,8 @@ class RoomsScreen extends StatelessWidget {
                   ),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: () {
-                    context.pushNamed(RouteNames.roomDetails, pathParameters: {'id': plan.id});
+                    context.pushNamed(RouteNames.roomDetails,
+                        pathParameters: {'id': plan.id},);
                   },
                 ),
               );

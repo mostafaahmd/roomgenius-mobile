@@ -42,7 +42,6 @@ class CreateRoomCubit extends Cubit<CreateRoomState> {
       emit(
         state.copyWith(
           status: CreateRoomStatus.pickingImage,
-          errorMessage: null,
         ),
       );
 

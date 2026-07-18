@@ -30,8 +30,7 @@ class SelectDesignMoodScreen extends StatelessWidget {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: DesignMood.values.length,
-              gridDelegate:
-                  const SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 12,
                 crossAxisSpacing: 12,
@@ -45,9 +44,7 @@ class SelectDesignMoodScreen extends StatelessWidget {
                   isSelected: state.draft.designMood == mood,
                   icon: Icons.wb_sunny_outlined,
                   onTap: () {
-                    context
-                        .read<CreateRoomCubit>()
-                        .selectDesignMood(mood);
+                    context.read<CreateRoomCubit>().selectDesignMood(mood);
                   },
                 );
               },

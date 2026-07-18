@@ -30,8 +30,7 @@ class SelectDesignStyleScreen extends StatelessWidget {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: DesignStyle.values.length,
-              gridDelegate:
-                  const SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 12,
                 crossAxisSpacing: 12,
@@ -45,9 +44,7 @@ class SelectDesignStyleScreen extends StatelessWidget {
                   isSelected: state.draft.designStyle == style,
                   icon: Icons.auto_awesome_outlined,
                   onTap: () {
-                    context
-                        .read<CreateRoomCubit>()
-                        .selectDesignStyle(style);
+                    context.read<CreateRoomCubit>().selectDesignStyle(style);
                   },
                 );
               },

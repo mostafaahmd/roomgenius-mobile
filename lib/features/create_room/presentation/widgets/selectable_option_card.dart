@@ -25,9 +25,8 @@ class SelectableOptionCard extends StatelessWidget {
         duration: const Duration(milliseconds: 180),
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: isSelected
-              ? colorScheme.primaryContainer
-              : colorScheme.surface,
+          color:
+              isSelected ? colorScheme.primaryContainer : colorScheme.surface,
           borderRadius: BorderRadius.circular(18),
           border: Border.all(
             color: isSelected
@@ -53,8 +52,7 @@ class SelectableOptionCard extends StatelessWidget {
               title,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontWeight:
-                        isSelected ? FontWeight.w700 : FontWeight.w500,
+                    fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                   ),
             ),
           ],

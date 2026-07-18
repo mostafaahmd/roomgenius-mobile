@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:roomgenius_mobile/features/create_room/presentation/cubit/create_room_cubit.dart';
 import 'package:roomgenius_mobile/features/create_room/presentation/cubit/create_room_state.dart';
 
-
 class UploadRoomPhotoScreen extends StatelessWidget {
   const UploadRoomPhotoScreen({super.key});
 
@@ -14,8 +13,7 @@ class UploadRoomPhotoScreen extends StatelessWidget {
     return BlocBuilder<CreateRoomCubit, CreateRoomState>(
       builder: (context, state) {
         final imagePath = state.draft.imagePath;
-        final isLoading =
-            state.status == CreateRoomStatus.pickingImage;
+        final isLoading = state.status == CreateRoomStatus.pickingImage;
 
         return ListView(
           padding: const EdgeInsets.all(24),
@@ -30,7 +28,6 @@ class UploadRoomPhotoScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyMedium,
             ),
             const SizedBox(height: 24),
-
             if (imagePath != null)
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
@@ -57,9 +54,7 @@ class UploadRoomPhotoScreen extends StatelessWidget {
                   ),
                 ),
               ),
-
             const SizedBox(height: 24),
-
             if (state.errorMessage != null) ...[
               Text(
                 state.errorMessage!,
@@ -70,14 +65,11 @@ class UploadRoomPhotoScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
             ],
-
             FilledButton.icon(
               onPressed: isLoading
                   ? null
                   : () {
-                      context
-                          .read<CreateRoomCubit>()
-                          .pickImageFromGallery();
+                      context.read<CreateRoomCubit>().pickImageFromGallery();
                     },
               icon: isLoading
                   ? const SizedBox(
@@ -93,9 +85,7 @@ class UploadRoomPhotoScreen extends StatelessWidget {
               onPressed: isLoading
                   ? null
                   : () {
-                      context
-                          .read<CreateRoomCubit>()
-                          .pickImageFromCamera();
+                      context.read<CreateRoomCubit>().pickImageFromCamera();
                     },
               icon: const Icon(Icons.photo_camera_outlined),
               label: const Text('Take Photo'),

@@ -30,8 +30,7 @@ class SelectRoomTypeScreen extends StatelessWidget {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: RoomType.values.length,
-              gridDelegate:
-                  const SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 12,
                 crossAxisSpacing: 12,
@@ -45,9 +44,7 @@ class SelectRoomTypeScreen extends StatelessWidget {
                   isSelected: state.draft.roomType == roomType,
                   icon: Icons.chair_outlined,
                   onTap: () {
-                    context
-                        .read<CreateRoomCubit>()
-                        .selectRoomType(roomType);
+                    context.read<CreateRoomCubit>().selectRoomType(roomType);
                   },
                 );
               },
